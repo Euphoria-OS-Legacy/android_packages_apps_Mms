@@ -118,6 +118,10 @@ public class MessagingPreferenceActivity extends PreferenceActivity
     private final static String EXPIRY_ONE_WEEK = "604800"; // 7 * 24 * 60 * 60
     private final static String EXPIRY_TWO_DAYS = "172800"; // 2 * 24 * 60 * 60
 
+    // Vibrate pattern
+    public static final String NOTIFICATION_VIBRATE_PATTERN =
+            "pref_key_mms_notification_vibrate_pattern";
+
     // QuickMessage
     public static final String QUICKMESSAGE_ENABLED      = "pref_key_quickmessage";
     public static final String QM_LOCKSCREEN_ENABLED     = "pref_key_qm_lockscreen";
