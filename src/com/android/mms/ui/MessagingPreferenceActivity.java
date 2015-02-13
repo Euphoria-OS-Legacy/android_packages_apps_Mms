@@ -165,6 +165,7 @@ public class MessagingPreferenceActivity extends PreferenceActivity
     private Preference mManageSdcardSMSPref;
     private Preference mClearHistoryPref;
     private CheckBoxPreference mVibratePref;
+    private ListPreference mVibratePatternPref;
     private CheckBoxPreference mEnableNotificationsPref;
     private CheckBoxPreference mMmsAutoRetrievialPref;
     private ListPreference mMmsExpiryPref;
@@ -318,10 +319,13 @@ public class MessagingPreferenceActivity extends PreferenceActivity
         mSmsSignaturePref = (CheckBoxPreference) findPreference("pref_key_enable_signature");
         mSmsSignatureEditPref = (EditTextPreference) findPreference("pref_key_edit_signature");
         mVibratePref = (CheckBoxPreference) findPreference(NOTIFICATION_VIBRATE);
+        mVibratePatternPref = (ListPreference) findPreference(NOTIFICATION_VIBRATE_PATTERN);
         Vibrator vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
         if (mVibratePref != null && (vibrator == null || !vibrator.hasVibrator())) {
             mNotificationPrefCategory.removePreference(mVibratePref);
+            mNotificationPrefCategory.removePreference(mVibratePatternPref);
             mVibratePref = null;
+            mVibratePatternPref = null;
         }
         mRingtonePref = (RingtonePreference) findPreference(NOTIFICATION_RINGTONE);
         mSmsTemplate = findPreference("pref_key_message_template");
