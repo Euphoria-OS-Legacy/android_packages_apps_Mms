@@ -139,6 +139,10 @@ public class MessagingPreferenceActivity extends PreferenceActivity
     // Font Size
     public static final String MESSAGE_FONT_SIZE         = "pref_key_mms_message_font_size";
 
+    // Timestamps
+    public static final String FULL_TIMESTAMP            = "pref_key_mms_full_timestamp";
+    public static final String SENT_TIMESTAMP            = "pref_key_mms_use_sent_timestamp";
+
     // Menu entries
     private static final int MENU_RESTORE_DEFAULTS       = 1;
 
